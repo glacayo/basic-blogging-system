@@ -33,9 +33,10 @@
                         </div>
                         <div class="form-group">
                             <label>Embed </label>                            
-                            <textarea name="iframe" class="form-control" required></textarea>
+                            <textarea name="iframe" class="form-control"></textarea>
                         </div>  
                         <div class="form-group">
+                            @csrf
                             <input type="submit" value="Enviar" class="btn btn-md btn-primary">
                         </div>                                                                        
                     </form>
