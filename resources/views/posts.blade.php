@@ -7,6 +7,13 @@
             @foreach ($posts as $post)
                 <article class="card mb-3">
                     <div class="card-body">
+                        @if ($post->image)
+                            <img src="{{ $post->get_image }}" alt="{{ $post->title }}" class="card-img-top img-fluid">
+                        @elseif ($post->iframe)
+                            <div class="embed-responsive embed-responsive-16by9">
+                            {!! $post->iframe !!}
+                            </div>
+                        @endif
                         <h2 class="card-title">{{ $post->title }}</h2>
                         <p class="card-text">
                             {{ $post->get_excerpt }}
